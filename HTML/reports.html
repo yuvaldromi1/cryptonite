@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptonite | Live Reports</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <!-- Chart.js for sparkline charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- ניווט משותף לכל הדפים -->
+    <nav class="navbar">
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reports.html" class="active">Live Reports</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+
+        <div class="navbar-search">
+            <input type="text" id="searchInput" placeholder="Search coin...">
+            <button id="searchBtn">Search</button>
+        </div>
+    </nav>
+
+    <!-- אזור התוכן של דוח המחירים בזמן אמת -->
+    <main>
+        <section class="reports-section">
+            <div class="reports-header">
+                <h2>Live Crypto Reports</h2>
+                <p>Real-time market data with live updates</p>
+                <div id="updateStatus" style="margin-top: 10px; font-size: 0.9rem; color: #39ff14;">
+                    📡 Initializing live data...
+                </div>
+            </div>
+
+            <!-- טבלת הדוח: תתעדכן ב-JavaScript עם נתוני CoinGecko -->
+            <div class="table-wrapper">
+                <table class="crypto-table" id="cryptoTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Coin</th>
+                            <th>Price</th>
+                            <th>Market Cap</th>
+                            <th>Volume 24h</th>
+                            <th>Liquidity ±2%</th>
+                            <th>All-time High</th>
+                            <th>1h</th>
+                            <th>24h</th>
+                            <th>Weekly</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../JS/reports.js"></script>
+</body>
+
+</html>

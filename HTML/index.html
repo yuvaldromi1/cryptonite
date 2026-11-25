@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptonite | Real-Time Crypto Tracker</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+
+<body>
+    <!-- ניווט ראשי: לוגו ותפריט מעבר בין הדפים -->
+    <nav class="navbar">
+        <ul class="navbar-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="reports.html">Live Reports</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+
+        <div class="navbar-search">
+            <div class="watchlist-counter">
+                <span id="watchlistCounter">0/5</span>
+                <span class="counter-label">Selected</span>
+            </div>
+            <input type="text" id="searchInput" placeholder="Search coin...">
+            <button id="searchBtn">Search</button>
+            <button id="clearBtn" title="Clear all watchlist selections">Clear</button>
+        </div>
+    </nav>
+
+    <!-- אזור פרלקסי פתיחה: טקסט שיווקי ורקע מונפש -->
+    <section class="parallax-hero">
+        <div class="parallax-bg"></div>
+        <div class="parallax-grid"></div>
+        <div class="parallax-glow"></div>
+        <div class="parallax-coins">
+            <span class="floating-coin"></span>
+            <span class="floating-coin"></span>
+            <span class="floating-coin"></span>
+            <span class="floating-coin"></span>
+        </div>
+        <div class="parallax-content">
+            <h1 class="hero-title" id="parallaxTitle">Cryptonite</h1>
+            <p class="hero-subtitle">Real-time market data, curated watchlists, elegant insights</p>
+        </div>
+    </section>
+
+    <!-- הוראות לשימוש -->
+    <section class="instructions-section">
+        <div class="instructions-container">
+            <h2 class="instructions-title">💰 Browse All Cryptocurrencies</h2>
+            <div class="instructions-content">
+                <p class="instructions-text">
+                    🔍 <strong>Explore 20+ cryptocurrencies</strong> below and discover market data, prices, and trends.
+                </p>
+                <p class="instructions-text">
+                    ⭐ <strong>Select up to 5 coins</strong> for your watchlist to see live updates and detailed reports.
+                </p>
+                <p class="instructions-text">
+                    📊 <strong>View live reports</strong> by navigating to the "Live Reports" page after making your
+                    selections.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- תוכן מרכזי: גריד הכרטיסיות של המטבעות -->
+    <main>
+        <div class="coins-container">
+            <div id="coinsGrid" class="coins-grid"></div>
+        </div>
+    </main>
+
+    <!-- מודאל החלפת מטבעות כאשר עוברים את מכסת 5 הבחירות -->
+    <div id="maxWatchlistDialog" class="modal-backdrop" style="display: none;">
+        <div class="modal-dialog max-watchlist-modal">
+            <h3 class="modal-title">Maximum Coins Reached</h3>
+            <p class="modal-description">You can select up to 5 coins for comparison. To add <span
+                    id="newCoinName"></span>, please choose one to remove:</p>
+            <div class="watchlist-list" id="watchlistCheckboxList"></div>
+            <div class="modal-actions">
+                <button id="maxWatchlistClose">CLOSE</button>
+                <button id="maxWatchlistConfirm">CONFIRM</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- סקריפטים מודולריים: קבצים נפרדים לפי תפקיד -->
+    <script type="module" src="../JS/main.js"></script>
+</body>
+
+</html>
