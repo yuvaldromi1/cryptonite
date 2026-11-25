@@ -6,6 +6,8 @@ A single-page crypto tracker in plain JavaScript: browse coins, see prices in se
 
 *Screenshot taken with a saved market snapshot; the live app loads current prices from CoinGecko.*
 
+**Live demo:** https://yuvaldromi1.github.io/cryptonite/
+
 ## Features
 
 - Coin list with search, loaded from the CoinGecko REST API
